@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment Thursday</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<style></style>
+	</head>
+	<body>
+		<p>Username:</p>
+		<input type="text" value="" id="first" class="form-control">
+		<p id="another"></p>
+		<p>Password:</p>
+		<input type="password" value="" id="second" class="form-control">
+		<p id="clear"></p>
+		<p>Confirm Password:</p>
+		<input type="password" value="" id="third" class="form-control">
+		<button class="btn btn-primary" onclick="passcheck()">Login</button>
+
+		<script type="text/javascript">
+          function passcheck(){
+          	document.getElementById('another').innerHTML='';
+		document.getElementById('clear').innerHTML='';
+
+		var x=document.getElementById('first').value;
+		var y=document.getElementById('second').value;
+		var z=document.getElementById('third').value;
+
+		if(x==''){alert('Please enter your username');
+		document.getElementById('another').innerHTML='Please enter your username';
+		document.getElementById('another').style='color:red';}
+
+		else if(y!=z){alert('Please confirm your password');}
+		else if((y=='')&&(z=='')){alert('Please enter your password');
+		document.getElementById('clear').innerHTML='Please enter your password';
+		document.getElementById('clear').style='color:red';}
+		else if(y==z){alert('You have confirmed your password correctly');}
+		else{alert('Please fill in your information');}
+          }
+			
+		</script>
+	</body>
+</html>
